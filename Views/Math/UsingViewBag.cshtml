@@ -1,0 +1,15 @@
+﻿
+<h2>PassUsingViewBag</h2>
+
+<p><b>Rand Value First: @ViewBag.FirstNumber</b></p>
+<p><b>Rand Value Second: @ViewBag.SecondNumber</b></p>
+
+<p><b>Add:</b> <br />@ViewBag.FirstNumber + @ViewBag.SecondNumber = @ViewBag.AddResult</p>
+<p><b>Sub:</b> <br />@ViewBag.FirstNumber - @ViewBag.SecondNumber = @ViewBag.SubtractResult</p>
+<p><b>Mult:</b> <br />@ViewBag.FirstNumber * @ViewBag.SecondNumber = @ViewBag.MultiplyResult</p>
+<p><b>Div:</b> <br />@ViewBag.FirstNumber / @ViewBag.SecondNumber = @ViewBag.DivideResult</p>
+
+@if (ViewBag.ErrorMessage != null)
+{
+    <p style="color:red">@ViewBag.ErrorMessage</p>
+}

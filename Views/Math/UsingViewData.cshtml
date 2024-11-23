@@ -1,0 +1,13 @@
+﻿
+<h2>PassUsingViewData</h2>
+<p><b>Rand Value First: @ViewData["FirstNumber"]</b></p>
+<p><b>Rand Value Second: @ViewData["SecondNumber"]</b></p>
+<p><b>Add:</b> <br /> @ViewData["FirstNumber"] + @ViewData["SecondNumber"] = @ViewData["AddResult"]</p>
+<p><b>Sub:</b> <br /> @ViewData["FirstNumber"] - @ViewData["SecondNumber"] = @ViewData["SubtractResult"]</p>
+<p><b>Mult:</b> <br /> @ViewData["FirstNumber"] * @ViewData["SecondNumber"] = @ViewData["MultiplyResult"]</p>
+<p><b>Div:</b> <br /> @ViewData["FirstNumber"] / @ViewData["SecondNumber"] = @ViewData["DivideResult"]</p>
+
+@if (ViewData["ErrorMessage"] != null)
+{
+    <p style="color:red">@ViewData["ErrorMessage"]</p>
+}

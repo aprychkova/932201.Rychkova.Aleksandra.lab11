@@ -1,0 +1,20 @@
+﻿@model Backend1.Models.OperationResult
+@if (Model != null)
+{
+<h2>PassUsingModel</h2>
+<p><b> Rand Value First: @Model.FirstNumber</b></p>
+<p><b>Rand Value Second: @Model.SecondNumber</b></p>
+<p><b>Add:</b> <br /> @Model.FirstNumber+@Model.SecondNumber = @Model.AddResult</p>
+<p><b>Sub:</b> <br />@Model.FirstNumber - @Model.SecondNumber = @Model.SubtractResult</p>
+<p><b>Mult:</b> <br /> @Model.FirstNumber * @Model.SecondNumber = @Model.MultiplyResult</p>
+<p><b>Div:</b> <br /> @Model.FirstNumber / @Model.SecondNumber = @Model.DivideResult</p>
+
+@if (!string.IsNullOrEmpty(@Model.ErrorMessage))
+{
+    <p style="color:red;">Ошибка: @Model.ErrorMessage</p>
+}
+}
+else
+{
+<p>Ошибка: Модель не была передана в представление.</p>
+}
